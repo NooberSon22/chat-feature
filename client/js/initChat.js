@@ -21,31 +21,33 @@ export default function initChat() {
 
   const createMessageElement = (message, type) => {
     const li = document.createElement("li");
-    const styles = {
-      send_message: {
-        bgColor: "bg-blue-500",
-        textColor: "text-white",
-        alignment: "ml-auto",
-      },
-      receive_message: {
-        bgColor: "bg-slate-200",
-        textColor: "text-black",
-        alignment: "mr-0",
-      },
-    };
+    // const styles = {
+    //   send_message: {
+    //     bgColor: "bg-blue-500",
+    //     textColor: "text-white",
+    //     alignment: "ml-auto",
+    //   },
+    //   receive_message: {
+    //     bgColor: "bg-slate-200",
+    //     textColor: "text-black",
+    //     alignment: "mr-0",
+    //   },
+    // };
 
-    const { bgColor, textColor, alignment } = styles[type];
-    li.classList.add(
-      textColor,
-      bgColor,
-      "rounded-md",
-      "px-3",
-      "py-2",
-      "max-w-[15em]",
-      "break-words",
-      alignment
-    );
+    //const { bgColor, textColor, alignment } = styles[type];
+    // li.classList.add(
+    //   textColor,
+    //   bgColor,
+    //   "rounded-md",
+    //   "px-3",
+    //   "py-2",
+    //   "max-w-[15em]",
+    //   "break-words",
+    //   alignment
+    // );
+    li.classList.add(type === "send_message" ? "message" : "receive");
     li.textContent = message;
+    console.log(li);
 
     return li;
   };

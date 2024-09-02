@@ -3,13 +3,6 @@
 @tailwind utilities;
 
 @layer components {
-    .place-end {
-        justify-self: end;
-    }
-
-    .place-start {
-        justify-self: start;
-    }
 
     #loader {
         display: none;
@@ -43,4 +36,25 @@
         transform: scale(1);
     }
     }
+}
+
+.message {
+    color: white;
+    margin-left: auto;
+    background-color: rgb(59 130 246);
+    max-width: 15em;
+    word-break: break-all;
+    border-radius: 1rem;
+    padding-inline: 1rem;
+    padding-block: 0.7rem;
+}
+
+.receive {
+    color: black;
+    background-color: rgb(226 232 240);
+    max-width: 15em;
+    word-break: break-all;
+    border-radius: 1rem;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
 }
