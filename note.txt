@@ -1,0 +1,37 @@
+Chat Feature Overview
+
+1. Purpose
+    The chat feature is designed to assist students by answering their queries through a university desk help system.
+
+2. Key Components
+    - AI Model Support
+        Integration with an AI model (under development) to handle and respond to queries.
+
+    - Technologies
+        Planning to use PyTorch and Hugging Face for AI model development.
+    
+    - Agent Support:
+        Human agents from the university who provide answers and assistance.
+    
+3. User Login and Chat History
+    - Login Requirements:
+        Students will be prompted to log in to save their chat history.
+        If a user does not log in, the chat history will be deleted.
+        Logged-in users have their chat history saved for future reference and continued support.
+    
+4. Chat Room Management
+    - Room Creation:
+        A chat room is automatically created when a user initiates a new chat.
+        If logged in, the chat history for this room will be saved.
+        If not logged in, the chat history will be deleted after the session ends.
+
+    - Access and Status:
+        Multiple agents can access and respond to the same chat room.
+        The chat room will have a status visible only to agents:
+            IN PROGRESS: When the user initiates a new chat.
+            COMPLETED: When the user's query is resolved or the chat is finished.
+            ON HOLD: When the user initiates a chat, but the agent is unable to answer immediately.
+
+    - User Options:
+        Users can clear their chat history and start a new conversation if needed.
+

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <main>
+      <div class="min-h-screen grid place-items-center">
+        <div class="w-full h-full flex flex-col max-w-[40em]">
+          <div class="p-5 bg-blue-500 space-y-4">
+            <div class="flex justify-between">
+              <div class="space-x-3">
+                <label class="text-white">Receive</label>
+                <select name="" id="receive-list">
+                  <option value="None">None</option>
+                  <option value="CSS">CCS</option>
+                  <option value="COA">COA</option>
+                  <option value="COB">COB</option>
+                </select>
+              </div>
+
+              <div class="space-x-3">
+                <label class="text-white">Send</label>
+                <select name="" id="send-list">
+                  <option value="None">None</option>
+                  <option value="CCS">CCS</option>
+                  <option value="COA">COA</option>
+                  <option value="COB">COB</option>
+                </select>
+              </div>
+            </div>
+
+            <p class="" id="tag"></p>
+          </div>
+          <ul class="flex flex-col items-start gap-5 mt-5 px-5" id="message-list">
+          </ul>
+          <div class="w-full place-content-start mt-5 px-5" id="loader">
+            <div class="loader">
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+          </div>
+        
+          <div class="w-full fixed left-0 bottom-0 z-10 grid place-items-center bg-white">
+            <div class="p-5 flex gap-5 mt-auto max-w-[40em] w-full">
+              <textarea name="" class="flex-1 outline-none border border-slate-500/90 px-3 py-3 text-[0.9rem] rounded-l-md resize-none" id="message-input"></textarea>
+              <button class="bg-blue-700 text-white px-5 py-3 rounded-r-md" id="message-button">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

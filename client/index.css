@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .place-end {
+        justify-self: end;
+    }
+
+    .place-start {
+        justify-self: start;
+    }
+
+    #loader {
+        display: none;
+    }
+
+    .loader {
+        text-align: center;    
+    }
+    .loader span {
+        display: inline-block;
+        vertical-align: middle;
+        width: 15px;
+        height: 15px;
+        background: rgb(26, 93, 124);
+        border-radius: 15px;
+        animation: loader 0.8s infinite alternate;
+    }
+    .loader span:nth-of-type(2) {
+        animation-delay: 0.2s;
+    }
+    .loader span:nth-of-type(3) {
+        animation-delay: 0.6s;
+    }
+    @keyframes loader {
+    0% {
+        opacity: 0.9;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 0.1;
+        transform: scale(1);
+    }
+    }
+}
